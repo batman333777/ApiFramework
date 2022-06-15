@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Validating Place API's" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-10-31T22:14:23" hostname="Hemils-MacBook-Pro.local" time="9.278">
+  <properties/>
+  <testcase name="Verify if AddPlaceApi and GetPlaceApi functionality is working by adding place and checking that's added #1" classname="Validating Place API's" time="4.29"/>
+  <testcase name="Verify if AddPlaceApi and GetPlaceApi functionality is working by adding place and checking that's added #2" classname="Validating Place API's" time="2.235"/>
+  <testcase name="Verify if Delete place functionality is working" classname="Validating Place API's" time="2.752"/>
+  <system-out><![CDATA[
+@AddPlace
+Scenario Outline: Verify if AddPlaceApi and GetPlaceApi functionality is working by adding place and checking that's added # src/test/resources/Features/placeValidation.feature:12
+  Given Add Place Payload with "Tom"  "English" "World cross center"                                                       # io.cucumber.skeleton.StepDefs.StepDefinitions.addPlacePayloadWith(java.lang.String,java.lang.String,java.lang.String)
+  When user calls "AddPlaceApi" with "POST" http request                                                                   # io.cucumber.skeleton.StepDefs.StepDefinitions.userCallsWithHttpRequest(java.lang.String,java.lang.String)
+  Then the API call got success with status code 200                                                                       # io.cucumber.skeleton.StepDefs.StepDefinitions.theAPICallGotSuccessWithStatusCode(int)
+  And "status" in response body is "OK"                                                                                    # io.cucumber.skeleton.StepDefs.StepDefinitions.inResponseBodyIs(java.lang.String,java.lang.String)
+  And verify place_Id created maps to "Tom" using "GetPlaceApi"                                                            # io.cucumber.skeleton.StepDefs.StepDefinitions.verifyPlace_IdCreatedMapsToUsing(java.lang.String,java.lang.String)
+
+@AddPlace
+Scenario Outline: Verify if AddPlaceApi and GetPlaceApi functionality is working by adding place and checking that's added # src/test/resources/Features/placeValidation.feature:13
+  Given Add Place Payload with "John"  "Spanish" "Toronto"                                                                 # io.cucumber.skeleton.StepDefs.StepDefinitions.addPlacePayloadWith(java.lang.String,java.lang.String,java.lang.String)
+  When user calls "AddPlaceApi" with "POST" http request                                                                   # io.cucumber.skeleton.StepDefs.StepDefinitions.userCallsWithHttpRequest(java.lang.String,java.lang.String)
+  Then the API call got success with status code 200                                                                       # io.cucumber.skeleton.StepDefs.StepDefinitions.theAPICallGotSuccessWithStatusCode(int)
+  And "status" in response body is "OK"                                                                                    # io.cucumber.skeleton.StepDefs.StepDefinitions.inResponseBodyIs(java.lang.String,java.lang.String)
+  And verify place_Id created maps to "John" using "GetPlaceApi"                                                           # io.cucumber.skeleton.StepDefs.StepDefinitions.verifyPlace_IdCreatedMapsToUsing(java.lang.String,java.lang.String)
+
+@DeletePlace
+Scenario: Verify if Delete place functionality is working   # src/test/resources/Features/placeValidation.feature:16
+  Given DeletePlace Payload                                 # io.cucumber.skeleton.StepDefs.StepDefinitions.deleteplacePayload()
+  When user calls "DeletePlaceApi" with "POST" http request # io.cucumber.skeleton.StepDefs.StepDefinitions.userCallsWithHttpRequest(java.lang.String,java.lang.String)
+  Then the API call got success with status code 200        # io.cucumber.skeleton.StepDefs.StepDefinitions.theAPICallGotSuccessWithStatusCode(int)
+  And "status" in response body is "OK"                     # io.cucumber.skeleton.StepDefs.StepDefinitions.inResponseBodyIs(java.lang.String,java.lang.String)
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - response is :{"status":"OK","place_id":"d65311b37abe1d3d0d5fcfc7f17b188a","scope":"APP","reference":"c6f0e651939d1f13662745bd6d103191c6f0e651939d1f13662745bd6d103191","id":"c6f0e651939d1f13662745bd6d103191"}
+[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - request specification is: io.restassured.internal.RequestSpecificationImpl@22f6aeb5
+[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - response is :{"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Tom","phone_number":"(+91) 983 893 3937","address":"World cross center","types":"shoe Park","website":"https:\/\/rahulshettyacademy.com","language":"English"}
+[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - response is :{"status":"OK","place_id":"af678f4cc0440ae506de43081a0bacef","scope":"APP","reference":"48561c790685d64f1760fcdcdd84fa5f48561c790685d64f1760fcdcdd84fa5f","id":"48561c790685d64f1760fcdcdd84fa5f"}
+[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - request specification is: io.restassured.internal.RequestSpecificationImpl@5d7a16f2
+[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - response is :{"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"John","phone_number":"(+91) 983 893 3937","address":"Toronto","types":"shoe Park","website":"https:\/\/rahulshettyacademy.com","language":"Spanish"}
+[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - response is :{"status":"OK"}
+]]></system-err>
+</testsuite>

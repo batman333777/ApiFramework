@@ -1,0 +1,366 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-10-31T22:14:23.413Z",
+        "line": 12,
+        "name": "Verify if AddPlaceApi and GetPlaceApi functionality is working by adding place and checking that\u0027s added",
+        "description": "",
+        "id": "validating-place-api-s;verify-if-addplaceapi-and-getplaceapi-functionality-is-working-by-adding-place-and-checking-that-s-added;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 735659000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Add Place Payload with \"Tom\"  \"English\" \"World cross center\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Tom\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"English\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"World cross center\"",
+                  "offset": 40
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.addPlacePayloadWith(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 722972000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user calls \"AddPlaceApi\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceApi\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 30
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.userCallsWithHttpRequest(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1579000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.theAPICallGotSuccessWithStatusCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 299795000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.inResponseBodyIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2377348000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify place_Id created maps to \"Tom\" using \"GetPlaceApi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Tom\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"GetPlaceApi\"",
+                  "offset": 44
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.verifyPlace_IdCreatedMapsToUsing(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-31T22:14:27.623Z",
+        "line": 13,
+        "name": "Verify if AddPlaceApi and GetPlaceApi functionality is working by adding place and checking that\u0027s added",
+        "description": "",
+        "id": "validating-place-api-s;verify-if-addplaceapi-and-getplaceapi-functionality-is-working-by-adding-place-and-checking-that-s-added;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3408000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Add Place Payload with \"John\"  \"Spanish\" \"Toronto\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"John\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"Spanish\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Toronto\"",
+                  "offset": 41
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.addPlacePayloadWith(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 126489000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user calls \"AddPlaceApi\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceApi\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 30
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.userCallsWithHttpRequest(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 810000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.theAPICallGotSuccessWithStatusCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7628000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.inResponseBodyIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2084309000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify place_Id created maps to \"John\" using \"GetPlaceApi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"John\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"GetPlaceApi\"",
+                  "offset": 45
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.verifyPlace_IdCreatedMapsToUsing(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-31T22:14:29.858Z",
+        "before": [
+          {
+            "result": {
+              "duration": 794000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "io.cucumber.skeleton.StepDefs.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Verify if Delete place functionality is working",
+        "description": "",
+        "id": "validating-place-api-s;verify-if-delete-place-functionality-is-working",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2454000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "DeletePlace Payload",
+            "match": {
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.deleteplacePayload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2731007000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user calls \"DeletePlaceApi\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeletePlaceApi\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 33
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.userCallsWithHttpRequest(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 375000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.theAPICallGotSuccessWithStatusCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7182000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "io.cucumber.skeleton.StepDefs.StepDefinitions.inResponseBodyIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlace"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place API\u0027s",
+    "description": "",
+    "id": "validating-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/placeValidation.feature",
+    "tags": []
+  }
+]

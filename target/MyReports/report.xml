@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="9.307">
+    <testcase classname="Validating Place API's" name="Verify if AddPlaceApi and GetPlaceApi functionality is working by adding place and checking that's added" time="4.2">
+        <system-out><![CDATA[Given Add Place Payload with "Tom"  "English" "World cross center"..........passed
+When user calls "AddPlaceApi" with "POST" http request......................passed
+Then the API call got success with status code 200..........................passed
+And "status" in response body is "OK".......................................passed
+And verify place_Id created maps to "Tom" using "GetPlaceApi"...............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validating Place API's" name="Verify if AddPlaceApi and GetPlaceApi functionality is working by adding place and checking that's added 2" time="2.228">
+        <system-out><![CDATA[Given Add Place Payload with "John"  "Spanish" "Toronto"....................passed
+When user calls "AddPlaceApi" with "POST" http request......................passed
+Then the API call got success with status code 200..........................passed
+And "status" in response body is "OK".......................................passed
+And verify place_Id created maps to "John" using "GetPlaceApi"..............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validating Place API's" name="Verify if Delete place functionality is working" time="2.746">
+        <system-out><![CDATA[Given DeletePlace Payload...................................................passed
+When user calls "DeletePlaceApi" with "POST" http request...................passed
+Then the API call got success with status code 200..........................passed
+And "status" in response body is "OK".......................................passed
+]]></system-out>
+    </testcase>
+</testsuite>

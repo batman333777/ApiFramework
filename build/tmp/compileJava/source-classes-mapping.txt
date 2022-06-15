@@ -1,0 +1,8 @@
+io/cucumber/skeleton/Enums/ApiResources.java
+ io.cucumber.skeleton.Enums.ApiResources
+io/cucumber/skeleton/Builder/TestDataBuild.java
+ io.cucumber.skeleton.Builder.TestDataBuild
+io/cucumber/skeleton/Pojo/AddPlace.java
+ io.cucumber.skeleton.Pojo.AddPlace
+io/cucumber/skeleton/Pojo/Location.java
+ io.cucumber.skeleton.Pojo.Location

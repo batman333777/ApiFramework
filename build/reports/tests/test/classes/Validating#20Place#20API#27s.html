@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Validating Place API's</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Validating Place API's</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Validating Place API's</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">9.277s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Verify if AddPlaceApi and GetPlaceApi functionality is working by adding place and checking that's added #1</td>
+<td class="success">4.290s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Verify if AddPlaceApi and GetPlaceApi functionality is working by adding place and checking that's added #2</td>
+<td class="success">2.235s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Verify if Delete place functionality is working</td>
+<td class="success">2.752s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@AddPlace
+Scenario Outline: Verify if AddPlaceApi and GetPlaceApi functionality is working by adding place and checking that's added # src/test/resources/Features/placeValidation.feature:12
+  Given Add Place Payload with &quot;Tom&quot;  &quot;English&quot; &quot;World cross center&quot;                                                       # io.cucumber.skeleton.StepDefs.StepDefinitions.addPlacePayloadWith(java.lang.String,java.lang.String,java.lang.String)
+  When user calls &quot;AddPlaceApi&quot; with &quot;POST&quot; http request                                                                   # io.cucumber.skeleton.StepDefs.StepDefinitions.userCallsWithHttpRequest(java.lang.String,java.lang.String)
+  Then the API call got success with status code 200                                                                       # io.cucumber.skeleton.StepDefs.StepDefinitions.theAPICallGotSuccessWithStatusCode(int)
+  And &quot;status&quot; in response body is &quot;OK&quot;                                                                                    # io.cucumber.skeleton.StepDefs.StepDefinitions.inResponseBodyIs(java.lang.String,java.lang.String)
+  And verify place_Id created maps to &quot;Tom&quot; using &quot;GetPlaceApi&quot;                                                            # io.cucumber.skeleton.StepDefs.StepDefinitions.verifyPlace_IdCreatedMapsToUsing(java.lang.String,java.lang.String)
+
+@AddPlace
+Scenario Outline: Verify if AddPlaceApi and GetPlaceApi functionality is working by adding place and checking that's added # src/test/resources/Features/placeValidation.feature:13
+  Given Add Place Payload with &quot;John&quot;  &quot;Spanish&quot; &quot;Toronto&quot;                                                                 # io.cucumber.skeleton.StepDefs.StepDefinitions.addPlacePayloadWith(java.lang.String,java.lang.String,java.lang.String)
+  When user calls &quot;AddPlaceApi&quot; with &quot;POST&quot; http request                                                                   # io.cucumber.skeleton.StepDefs.StepDefinitions.userCallsWithHttpRequest(java.lang.String,java.lang.String)
+  Then the API call got success with status code 200                                                                       # io.cucumber.skeleton.StepDefs.StepDefinitions.theAPICallGotSuccessWithStatusCode(int)
+  And &quot;status&quot; in response body is &quot;OK&quot;                                                                                    # io.cucumber.skeleton.StepDefs.StepDefinitions.inResponseBodyIs(java.lang.String,java.lang.String)
+  And verify place_Id created maps to &quot;John&quot; using &quot;GetPlaceApi&quot;                                                           # io.cucumber.skeleton.StepDefs.StepDefinitions.verifyPlace_IdCreatedMapsToUsing(java.lang.String,java.lang.String)
+
+@DeletePlace
+Scenario: Verify if Delete place functionality is working   # src/test/resources/Features/placeValidation.feature:16
+  Given DeletePlace Payload                                 # io.cucumber.skeleton.StepDefs.StepDefinitions.deleteplacePayload()
+  When user calls &quot;DeletePlaceApi&quot; with &quot;POST&quot; http request # io.cucumber.skeleton.StepDefs.StepDefinitions.userCallsWithHttpRequest(java.lang.String,java.lang.String)
+  Then the API call got success with status code 200        # io.cucumber.skeleton.StepDefs.StepDefinitions.theAPICallGotSuccessWithStatusCode(int)
+  And &quot;status&quot; in response body is &quot;OK&quot;                     # io.cucumber.skeleton.StepDefs.StepDefinitions.inResponseBodyIs(java.lang.String,java.lang.String)
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - response is :{&quot;status&quot;:&quot;OK&quot;,&quot;place_id&quot;:&quot;d65311b37abe1d3d0d5fcfc7f17b188a&quot;,&quot;scope&quot;:&quot;APP&quot;,&quot;reference&quot;:&quot;c6f0e651939d1f13662745bd6d103191c6f0e651939d1f13662745bd6d103191&quot;,&quot;id&quot;:&quot;c6f0e651939d1f13662745bd6d103191&quot;}
+[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - request specification is: io.restassured.internal.RequestSpecificationImpl@22f6aeb5
+[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - response is :{&quot;location&quot;:{&quot;latitude&quot;:&quot;-38.383494&quot;,&quot;longitude&quot;:&quot;33.427362&quot;},&quot;accuracy&quot;:&quot;50&quot;,&quot;name&quot;:&quot;Tom&quot;,&quot;phone_number&quot;:&quot;(+91) 983 893 3937&quot;,&quot;address&quot;:&quot;World cross center&quot;,&quot;types&quot;:&quot;shoe Park&quot;,&quot;website&quot;:&quot;https:\/\/rahulshettyacademy.com&quot;,&quot;language&quot;:&quot;English&quot;}
+[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - response is :{&quot;status&quot;:&quot;OK&quot;,&quot;place_id&quot;:&quot;af678f4cc0440ae506de43081a0bacef&quot;,&quot;scope&quot;:&quot;APP&quot;,&quot;reference&quot;:&quot;48561c790685d64f1760fcdcdd84fa5f48561c790685d64f1760fcdcdd84fa5f&quot;,&quot;id&quot;:&quot;48561c790685d64f1760fcdcdd84fa5f&quot;}
+[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - request specification is: io.restassured.internal.RequestSpecificationImpl@5d7a16f2
+[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - response is :{&quot;location&quot;:{&quot;latitude&quot;:&quot;-38.383494&quot;,&quot;longitude&quot;:&quot;33.427362&quot;},&quot;accuracy&quot;:&quot;50&quot;,&quot;name&quot;:&quot;John&quot;,&quot;phone_number&quot;:&quot;(+91) 983 893 3937&quot;,&quot;address&quot;:&quot;Toronto&quot;,&quot;types&quot;:&quot;shoe Park&quot;,&quot;website&quot;:&quot;https:\/\/rahulshettyacademy.com&quot;,&quot;language&quot;:&quot;Spanish&quot;}
+[Test worker] INFO io.cucumber.skeleton.StepDefs.StepDefinitions - response is :{&quot;status&quot;:&quot;OK&quot;}
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.7</a> at 01-Nov-2021, 3:44:46 am</p>
+</div>
+</div>
+</body>
+</html>
