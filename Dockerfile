@@ -3,3 +3,4 @@ MAINTAINER Hemil Turakhia
 COPY . /usr/restassuredapiframework/app
 WORKDIR /usr/restassuredapiframework/app
 ENTRYPOINT gradle cucumber
+CMD echo hi
