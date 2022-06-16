@@ -17,12 +17,16 @@ public class TestUtils {
     public static RequestSpecification requestSpecification;
 
     protected static String getResourceValue( String resource) {
-        return switch (resource) {
-            case "AddPlaceApi" -> ApiResources.ADD_PLACE_API.getResource();
-            case "DeletePlaceApi" -> ApiResources.DELETE_PLACE_API.getResource();
-            case "GetPlaceApi" -> ApiResources.GET_PLACE_API.getResource();
-            default -> null;
-        };
+        switch (resource) {
+            case "AddPlaceApi":
+                return ApiResources.ADD_PLACE_API.getResource();
+            case "DeletePlaceApi":
+                return ApiResources.DELETE_PLACE_API.getResource();
+            case "GetPlaceApi":
+                return ApiResources.GET_PLACE_API.getResource();
+            default:
+                return null;
+        }
     }
 
     public RequestSpecification requestSpecification() throws IOException {
