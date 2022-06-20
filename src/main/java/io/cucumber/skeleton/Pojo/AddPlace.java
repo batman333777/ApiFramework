@@ -1,5 +1,7 @@
 package io.cucumber.skeleton.Pojo;
 
+import io.cucumber.skeleton.Builder.LocationBuilder;
+
 import java.util.List;
 
 public class AddPlace {
@@ -10,8 +12,26 @@ public class AddPlace {
     private String address;
     private String website;
     private String language;
+
+    public AddPlace(int accuracy, String name, String phone_number, String address, String website, String language, Location location, List<String> types) {
+        this.accuracy = accuracy;
+        this.name = name;
+        this.phone_number = phone_number;
+        this.address = address;
+        this.website = website;
+        this.location = location;
+        this.language = language;
+        this.types = types;
+    }
+
+    public LocationBuilder getTourBuilder() {
+        return tourBuilder;
+    }
+
     private Location location;
     private List<String> types;
+
+    private LocationBuilder tourBuilder;
 
     public int getAccuracy() {
         return accuracy;
@@ -67,6 +87,10 @@ public class AddPlace {
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    public void setTourBuilder(LocationBuilder tourBuilder) {
+        this.tourBuilder = tourBuilder;
     }
 
     public List<String> getTypes() {

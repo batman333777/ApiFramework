@@ -21,20 +21,15 @@ public class TestDataBuild {
 
 
     public AddPlace addPlacePayload(String name, String language, String address) {
-        AddPlace addPlace = new AddPlace();
-        addPlace.setAccuracy(meters);
-        addPlace.setAddress(address);
-        addPlace.setLanguage(language);
-        addPlace.setPhone_number(phoneNumber);
-        addPlace.setWebsite(getGlobalValue("baseUrl"));
-        addPlace.setName(name);
         List<String> storeTypeList = new ArrayList<>();
         storeTypeList.add(storeType);
 
-        addPlace.setTypes(storeTypeList);
-        Location location = new Location();
-        location.setLat(latitude);
-        location.setLng(longitude);
+        AddPlace addPlace = new AddPlaceBuilder().setAccuracy(meters).setAddress(address).
+                setLanguage(language).setPhone_number(phoneNumber).setWebsite(getGlobalValue("baseUrl")).
+                setName(name).setTypes(storeTypeList).build();
+
+        Location location = new LocationBuilder().setLat(latitude).
+                setLng(longitude).build();
         addPlace.setLocation(location);
         return addPlace;
     }
